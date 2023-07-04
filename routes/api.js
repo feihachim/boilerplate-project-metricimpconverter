@@ -21,7 +21,7 @@ module.exports = function (app) {
       errors.push("unit");
     }
     if (errors.length > 0) {
-      res.json(`invalid ${errors.join(" and ")}`);
+      res.send(`invalid ${errors.join(" and ")}`);
     } else {
       const returnNum = convertHandler.convert(initNum, initUnit);
       const returnUnit = convertHandler.getReturnUnit(initUnit);
